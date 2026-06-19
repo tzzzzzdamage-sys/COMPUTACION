@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - Computación Aplicada</title>
+</head>
+<body style="background-color: #f8f9fa; margin: 0; padding: 20px 0;">
+
+<div style="font-family:'Segoe UI',Arial,sans-serif;max-width:960px;margin:0 auto;padding-bottom:48px;">
+
+  <div style="background:linear-gradient(135deg,#004d28,#006837,#008a4a);padding:44px 40px;border-radius:16px;margin-bottom:28px;display:flex;gap:28px;align-items:center;border:1px solid #004d28;">
+    <div style="flex:1;">
+      <p style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fbbf24;font-weight:700;margin:0 0 10px;">⚡ Autoevaluación</p>
+      <h1 style="font-size:44px;font-weight:900;color:#fff;margin:0 0 10px;">Quizzes <span style="color:#fbbf24;">Interactivos</span></h1>
+      <p style="color:rgba(255,255,255,.8);font-size:14px;line-height:1.7;margin:0;">Haz clic en <strong style="color:#fbbf24;">⚡ Iniciar</strong> para cargar las preguntas del módulo de Computación Aplicada. ¡Obtén retroalimentación instantánea!</p>
+    </div>
+    <div style="background:rgba(255,255,255,.1);border:1px solid rgba(251,191,36,.3);border-radius:12px;padding:16px 22px;text-align:center;flex-shrink:0;">
+      <span style="display:block;font-size:44px;font-weight:900;color:#fbbf24;line-height:1;">5</span>
+      <span style="font-size:11px;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:1px;">Unidades</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;">
+
+    <div style="background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);">
+      <div style="padding:18px 16px;"><div style="font-size:32px;margin-bottom:8px;">💻</div><h3 style="font-size:13px;font-weight:800;color:#111827;margin:0 0 4px;">Unidad 1 · Inf. Básica</h3><p style="font-size:11px;color:#6b7280;margin:0;line-height:1.5;">Hardware, Software, Periféricos y Sistema Binario.</p></div>
+      <div style="padding:10px 16px;border-top:1px solid #e5e7eb;background:#f0fdf4;display:flex;align-items:center;justify-content:space-between;"><span style="padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700;background:#dcfce7;color:#14532d;">8 preguntas</span><button onclick="loadQuiz(1)" style="padding:7px 14px;border-radius:100px;font-size:11px;font-weight:700;border:none;background:#16a34a;color:#fff;cursor:pointer;">⚡ Iniciar</button></div>
+    </div>
+
+    <div style="background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);">
+      <div style="padding:18px 16px;"><div style="font-size:32px;margin-bottom:8px;">📝</div><h3 style="font-size:13px;font-weight:800;color:#111827;margin:0 0 4px;">Unidad 2 · Win / Word</h3><p style="font-size:11px;color:#6b7280;margin:0;line-height:1.5;">Escritorio de Windows y Procesador de Textos.</p></div>
+      <div style="padding:10px 16px;border-top:1px solid #e5e7eb;background:#eff6ff;display:flex;align-items:center;justify-content:space-between;"><span style="padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700;background:#dbeafe;color:#1e3a8a;">8 preguntas</span><button onclick="loadQuiz(2)" style="padding:7px 14px;border-radius:100px;font-size:11px;font-weight:700;border:none;background:#2563eb;color:#fff;cursor:pointer;">⚡ Iniciar</button></div>
+    </div>
+
+    <div style="background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);">
+      <div style="padding:18px 16px;"><div style="font-size:32px;margin-bottom:8px;">📊</div><h3 style="font-size:13px;font-weight:800;color:#111827;margin:0 0 4px;">Unidad 3 · PowerPoint</h3><p style="font-size:11px;color:#6b7280;margin:0;line-height:1.5;">Presentaciones, Transiciones, Animaciones y Diseño.</p></div>
+      <div style="padding:10px 16px;border-top:1px solid #e5e7eb;background:#fff7ed;display:flex;align-items:center;justify-content:space-between;"><span style="padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700;background:#ffedd5;color:#7c2d12;">8 preguntas</span><button onclick="loadQuiz(3)" style="padding:7px 14px;border-radius:100px;font-size:11px;font-weight:700;border:none;background:#ea580c;color:#fff;cursor:pointer;">⚡ Iniciar</button></div>
+    </div>
+
+    <div style="background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);">
+      <div style="padding:18px 16px;"><div style="font-size:32px;margin-bottom:8px;">📈</div><h3 style="font-size:13px;font-weight:800;color:#111827;margin:0 0 4px;">Unidad 4 · Excel</h3><p style="font-size:11px;color:#6b7280;margin:0;line-height:1.5;">Hojas de cálculo, Celdas, Fórmulas y Funciones.</p></div>
+      <div style="padding:10px 16px;border-top:1px solid #e5e7eb;background:#f0fdf4;display:flex;align-items:center;justify-content:space-between;"><span style="padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700;background:#dcfce7;color:#14532d;">8 preguntas</span><button onclick="loadQuiz(4)" style="padding:7px 14px;border-radius:100px;font-size:11px;font-weight:700;border:none;background:#059669;color:#fff;cursor:pointer;">⚡ Iniciar</button></div>
+    </div>
+
+    <div style="background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);">
+      <div style="padding:18px 16px;"><div style="font-size:32px;margin-bottom:8px;">🌐</div><h3 style="font-size:13px;font-weight:800;color:#111827;margin:0 0 4px;">Unidad 5 · Internet</h3><p style="font-size:11px;color:#6b7280;margin:0;line-height:1.5;">Navegadores web, Redes Sociales y la Nube.</p></div>
+      <div style="padding:10px 16px;border-top:1px solid #e5e7eb;background:#fef2f2;display:flex;align-items:center;justify-content:space-between;"><span style="padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700;background:#fee2e2;color:#991b1b;">8 preguntas</span><button onclick="loadQuiz(5)" style="padding:7px 14px;border-radius:100px;font-size:11px;font-weight:700;border:none;background:#dc2626;color:#fff;cursor:pointer;">⚡ Iniciar</button></div>
+    </div>
+
+  </div>
+
+  <div id="quizZone" style="display:none;">
+    <div id="quizHeader" style="background:linear-gradient(135deg,#1f2937,#374151);border-radius:12px;padding:16px 22px;margin-bottom:16px;display:flex;align-items:center;gap:12px;border:1px solid #4b5563;">
+      <span id="quizEmoji" style="font-size:28px;"></span>
+      <div><p id="quizLabel" style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 3px;font-weight:700;"></p><h2 id="quizName" style="font-size:17px;font-weight:800;color:#fff;margin:0;"></h2></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+      <div style="flex:1;height:6px;background:#e5e7eb;border-radius:100px;overflow:hidden;"><div id="qprog" style="height:100%;width:0%;border-radius:100px;transition:width .4s;background:#16a34a;"></div></div>
+      <span id="qlab" style="font-size:11px;font-weight:700;color:#6b7280;white-space:nowrap;min-width:36px;text-align:right;"></span>
+    </div>
+    <div id="questionBox" style="background:linear-gradient(135deg,#1f2937,#374151);border-radius:12px;padding:22px 24px;margin-bottom:14px;border:1px solid #4b5563;">
+      <p style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 10px;font-weight:700;">Pregunta</p>
+      <p id="qtxt" style="color:#fff;font-size:15px;font-weight:600;line-height:1.7;margin:0;"></p>
+    </div>
+    <div id="qopts" style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;"></div>
+    <div id="qfb" style="display:none;padding:12px 16px;border-radius:10px;font-size:13px;font-weight:600;line-height:1.65;margin-bottom:14px;"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button id="btnReset" onclick="resetQ()" style="padding:8px 18px;border-radius:100px;font-size:12px;font-weight:700;border:2px solid #e5e7eb;background:transparent;color:#6b7280;cursor:pointer;">🔄 Reintentar</button>
+      <button id="btnNext" onclick="nextQ()" style="padding:8px 18px;border-radius:100px;font-size:12px;font-weight:700;border:none;background:#16a34a;color:#fff;cursor:pointer;">Siguiente ➡</button>
+    </div>
+    <div id="qscore" style="display:none;margin-top:18px;text-align:center;padding:28px;border-radius:14px;border:2px solid #10b981;background:linear-gradient(135deg,#ecfdf5,#d1fae5);">
+      <div id="scoreEmoji" style="font-size:52px;margin-bottom:10px;"></div>
+      <div id="scorenum" style="font-size:54px;font-weight:900;color:#047857;line-height:1;margin-bottom:8px;"></div>
+      <div id="scorelbl" style="font-size:16px;font-weight:800;color:#065f46;margin-bottom:4px;"></div>
+      <div id="scoresub" style="font-size:13px;color:#064e3b;margin-bottom:18px;"></div>
+      <button onclick="resetAll()" style="padding:10px 24px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#059669;color:#fff;cursor:pointer;">🔄 Intentar de nuevo</button>
+    </div>
+  </div>
+
+  <div id="quizPlaceholder" style="background:#fff;border-radius:14px;border:2px dashed #e5e7eb;padding:44px;text-align:center;">
+    <div style="font-size:52px;margin-bottom:14px;">👆</div>
+    <h3 style="font-size:17px;font-weight:800;color:#111827;margin:0 0 8px;">Selecciona una Unidad para comenzar</h3>
+    <p style="font-size:13px;color:#94a3b8;margin:0;">Haz clic en <strong style="color:#16a34a;">⚡ Iniciar</strong> en cualquiera de los quizzes de arriba.</p>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 13px; font-weight: 600;">
+      Sindicato Provincial de Choferes Profesionales de Manabí
+  </div>
+
+</div>
+
+<script>
+var QUIZDATA = {
+  1:{name:"Unidad 1 · Informática Básica",label:"CONCEPTOS Y COMPONENTES",emoji:"💻",color:"#16a34a",
+    qs:[
+      {q:"¿Qué ciencia estudia el Tratamiento Automático de la Información mediante sistemas informáticos?",
+       opts:["Ofimática","Informática","Algoritmia"],
+       ok:1,fb_ok:"✅ ¡Correcto! La Informática es la ciencia que abarca el tratamiento automático de la información.",fb_err:"❌ Incorrecto. La respuesta correcta es Informática."},
+      {q:"¿Por qué manejar un procesador de textos se considera Ofimática y no Informática según el módulo?",
+       opts:["Porque requiere obligatoriamente internet","Porque es el uso de aplicaciones de oficina, mientras que crear el programa sí es informática","Porque no emplea algoritmos matemáticos"],
+       ok:1,fb_ok:"✅ ¡Correcto! La ofimática es el *uso* de las herramientas de oficina. Desarrollar o crear el software es parte de la informática.",fb_err:"❌ Incorrecto. Se considera ofimática porque es el uso de las aplicaciones (herramientas de oficina), no su creación."},
+      {q:"¿En qué año se completó el primer computador de la historia llamado ENIAC?",
+       opts:["1946","1952","1939"],
+       ok:0,fb_ok:"✅ ¡Correcto! La computadora ENIAC fue terminada en el año 1946.",fb_err:"❌ Incorrecto. La máquina ENIAC fue completada en el año 1946."},
+      {q:"¿Cuáles son los dos componentes básicos de todo computador que trabajan de manera conjunta?",
+       opts:["El Monitor y el Teclado","El Hardware y el Software","Los Periféricos de Entrada y Salida"],
+       ok:1,fb_ok:"✅ ¡Correcto! Un sistema informático siempre está compuesto por la parte física (Hardware) y la parte lógica (Software).",fb_err:"❌ Incorrecto. Los componentes fundamentales son el Hardware (físico) y el Software (lógico)."},
+      {q:"¿Cómo se define el Software dentro del material de estudio?",
+       opts:["Es la estructura física que podemos ver y tocar","Es la parte lógica de la máquina, intangible, formada por los programas e información","Son los cables y placas de red"],
+       ok:1,fb_ok:"✅ ¡Correcto! El software es todo lo intangible: los programas, sistemas operativos y datos.",fb_err:"❌ Incorrecto. El software es la parte lógica e intangible de la máquina (los programas)."},
+      {q:"¿Qué tipo de periféricos son el teclado, el ratón (mouse) y el escáner?",
+       opts:["Periféricos de entrada de información","Periféricos de salida de información","Periféricos de entrada/salida"],
+       ok:0,fb_ok:"✅ ¡Correcto! Sirven para introducir datos y órdenes desde el exterior hacia el computador.",fb_err:"❌ Incorrecto. Son periféricos de entrada, ya que ingresan información al sistema."},
+      {q:"¿Cuál es el periférico de comunicación más comúnmente utilizado según el texto?",
+       opts:["El plotter","La impresora","El módem"],
+       ok:2,fb_ok:"✅ ¡Correcto! El módem es el dispositivo por excelencia para comunicar computadoras a través de redes como Internet.",fb_err:"❌ Incorrecto. El periférico de comunicación mencionado es el módem."},
+      {q:"En el sistema binario, ¿cómo se denomina a cada dígito individual (0 o 1)?",
+       opts:["Bit","Byte","Decimal"],
+       ok:0,fb_ok:"✅ ¡Correcto! La palabra 'Bit' proviene de Binary Digit y es la unidad mínima de información.",fb_err:"❌ Incorrecto. A cada dígito individual (0 o 1) se le conoce como Bit."}
+    ]
+  },
+  2:{name:"Unidad 2 · Windows y Word",label:"ESCRITORIO Y PROCESADOR DE TEXTOS",emoji:"📝",color:"#2563eb",
+    qs:[
+      {q:"¿Cuál fue el objetivo original de la creación de la interfaz del escritorio de Windows?",
+       opts:["Establecer una conexión de red automática","Generar un espacio de cómodo y fácil acceso a los programas y operaciones disponibles","Modificar de forma aleatoria el protector de pantalla"],
+       ok:1,fb_ok:"✅ ¡Correcto! El escritorio se diseñó para facilitar el acceso a las herramientas imitando un escritorio de trabajo real.",fb_err:"❌ Incorrecto. El objetivo era crear un entorno cómodo y de fácil acceso a los programas."},
+      {q:"¿Cuáles son las partes que conforman la barra de tareas ubicada abajo en el escritorio?",
+       opts:["Íconos, Puntero y Papel tapiz","Menú Inicio, Área de notificación, Barra de acceso rápido y botones de programas abiertos","Panel de control y Barra de menú"],
+       ok:1,fb_ok:"✅ ¡Correcto! Esos son los componentes principales que integran la barra de tareas clásica de Windows.",fb_err:"❌ Incorrecto. La barra de tareas contiene el Menú Inicio, el Área de notificación, accesos rápidos y programas abiertos."},
+      {q:"¿Qué combinación de teclas permite guardar un documento de manera rápida en Microsoft Word?",
+       opts:["CTRL + S","CTRL + G","CTRL + P"],
+       ok:1,fb_ok:"✅ ¡Correcto! En la versión en español de Word, CTRL + G ejecuta la acción de Guardar.",fb_err:"❌ Incorrecto. La combinación correcta para guardar en español es CTRL + G."},
+      {q:"Cada vez que se ingresa a Microsoft Word por defecto, ¿qué texto figura en la barra de título?",
+       opts:["Libro 1 – Microsoft Excel","Documento1 – Microsoft Word","Presentación1 – PowerPoint"],
+       ok:1,fb_ok:"✅ ¡Correcto! Al abrir un archivo nuevo en Word, se le asigna el nombre provisional 'Documento1'.",fb_err:"❌ Incorrecto. Por defecto, Word titula al archivo nuevo como 'Documento1 – Microsoft Word'."},
+      {q:"¿Qué elemento de la ventana de Word contiene las fichas y los comandos más importantes?",
+       opts:["Cinta de opciones","Barra de estado","Área de trabajo"],
+       ok:0,fb_ok:"✅ ¡Correcto! La Cinta de opciones agrupa todas las herramientas necesarias organizadas por pestañas.",fb_err:"❌ Incorrecto. Es la Cinta de opciones la que agrupa las fichas y comandos de Word."},
+      {q:"¿Qué es una Letra Capital de acuerdo con la definición del módulo?",
+       opts:["La fuente tipográfica predeterminada en un informe","Una letra mayúscula destacada al principio de un párrafo para empezar un documento","La línea vertical que parpadea indicando dónde escribir"],
+       ok:1,fb_ok:"✅ ¡Correcto! Es un formato especial que resalta la primera letra de un párrafo, dándole un aspecto de revista o libro antiguo.",fb_err:"❌ Incorrecto. Es una letra mayúscula grande y destacada al inicio de un párrafo."},
+      {q:"Para crear un acceso directo en el escritorio desde una carpeta de origen, ¿a qué menú se accede?",
+       opts:["Propiedades -> Personalizar -> Íconos","Enviar a -> Escritorio (crear acceso directo)","Nuevo -> Carpeta comprimida"],
+       ok:1,fb_ok:"✅ ¡Correcto! Haciendo clic derecho, la opción 'Enviar a -> Escritorio' crea rápidamente un atajo.",fb_err:"❌ Incorrecto. Se debe usar la ruta del menú contextual: Enviar a -> Escritorio (crear acceso directo)."},
+      {q:"¿Qué nombre recibe la línea vertical que parpadea continuamente en el área de trabajo?",
+       opts:["Puntero","Cursor","Barra de menú"],
+       ok:1,fb_ok:"✅ ¡Correcto! El cursor indica la posición exacta donde aparecerá el texto que vamos a digitar.",fb_err:"❌ Incorrecto. Esa línea parpadeante se denomina Cursor."}
+    ]
+  },
+  3:{name:"Unidad 3 · Microsoft PowerPoint",label:"PRESENTACIONES VISUALES",emoji:"📊",color:"#ea580c",
+    qs:[
+      {q:"¿Cuáles son las tres funciones fundamentales en torno a las cuales gira PowerPoint?",
+       opts:["Las transiciones, las animaciones y el diseño","Un editor de texto con formato, un sistema para insertar multimedia y un sistema de visualización continua","Guardar, Deshacer y Rehacer acciones"],
+       ok:1,fb_ok:"✅ ¡Correcto! PowerPoint es un editor de texto, un gestor multimedia y un proyector de diapositivas continuo.",fb_err:"❌ Incorrecto. Sus 3 funciones son: editar texto, insertar elementos multimedia y visualizar diapositivas de forma continua."},
+      {q:"¿Qué opciones de control comunes contiene la barra de herramientas de acceso rápido?",
+       opts:["Guardar, Deshacer y Rehacer","Abrir, Cerrar y Salir","Diapositiva de título y Comparación"],
+       ok:0,fb_ok:"✅ ¡Correcto! Estos tres comandos son los que vienen por defecto en la esquina superior izquierda.",fb_err:"❌ Incorrecto. Contiene por defecto los comandos Guardar, Deshacer y Rehacer."},
+      {q:"¿Qué comando o elemento visual permite ocultar o mostrar la cinta de opciones?",
+       opts:["CTRL + F1 o la flechita hacia arriba","Ficha Inicio -> Restablecer","Clic derecho -> Formato del fondo"],
+       ok:0,fb_ok:"✅ ¡Correcto! Esta combinación permite maximizar el área de trabajo ocultando temporalmente las herramientas.",fb_err:"❌ Incorrecto. Se utiliza el comando CTRL + F1 o la flecha ubicada a la derecha de la cinta."},
+      {q:"Según la ficha Archivo, ¿cuál es la diferencia exacta entre las opciones Cerrar y Salir?",
+       opts:["Cerrar cierra la aplicación y Salir cierra la presentación","Cerrar cierra la presentación y Salir cierra la aplicación","No existe ninguna diferencia operativa"],
+       ok:1,fb_ok:"✅ ¡Correcto! 'Cerrar' cierra el documento activo, mientras que 'Salir' apaga todo el programa PowerPoint.",fb_err:"❌ Incorrecto. 'Cerrar' finaliza el archivo actual (presentación), y 'Salir' cierra por completo el programa."},
+      {q:"Identifique la opción INCORRECTA respecto a los tipos de diseño de diapositivas provistos de fábrica:",
+       opts:["Diapositiva de Título","Título y objetos","SmartArts"],
+       ok:2,fb_ok:"✅ ¡Correcto! SmartArt es una herramienta gráfica que se inserta, no un tipo de diseño de diapositiva predeterminado.",fb_err:"❌ Incorrecto. SmartArts es una herramienta de gráficos, no un layout o diseño base de diapositiva."},
+      {q:"¿Qué afirmación es correcta sobre los colores de los SmartArts según el módulo?",
+       opts:["Son colores estáticos y permanentes","Vienen con colores por defecto del tema, pero pueden ser cambiados por el usuario","Solo admiten combinaciones en escala de grises"],
+       ok:1,fb_ok:"✅ ¡Correcto! Son altamente personalizables y se adaptan a las necesidades visuales del usuario.",fb_err:"❌ Incorrecto. Los SmartArts adoptan los colores del tema pero son completamente editables por el usuario."},
+      {q:"¿A qué elementos se les aplican las 'Animaciones' dentro de PowerPoint?",
+       opts:["A las diapositivas completas a la hora de pasar de una a otra","A los objetos individuales que se seleccionen dentro de una diapositiva","Únicamente a los archivos multimedia"],
+       ok:1,fb_ok:"✅ ¡Correcto! Las animaciones controlan la entrada, énfasis y salida de los objetos (textos, imágenes) dentro de una misma diapositiva.",fb_err:"❌ Incorrecto. Las animaciones se aplican a los objetos específicos (texto, imágenes, formas) dentro de la diapositiva."},
+      {q:"¿Qué área se destina a añadir anotaciones de apoyo que no se ven en la proyección pero se pueden imprimir?",
+       opts:["Área de esquema","Barra de estado","Área de notas"],
+       ok:2,fb_ok:"✅ ¡Correcto! El Área de notas es fundamental para que el expositor tenga un guion o recordatorios sin que el público los lea.",fb_err:"❌ Incorrecto. Esta sección es conocida como el Área de notas."}
+    ]
+  },
+  4:{name:"Unidad 4 · Microsoft Excel",label:"HOJAS DE CÁLCULO Y FÓRMULAS",emoji:"📈",color:"#059669",
+    qs:[
+      {q:"Si pulsamos la combinación de teclas CTRL + INICIO en Excel, la celda activa pasará a ser:",
+       opts:["La primera celda de la fila activa","La celda A1","La última celda de la columna"],
+       ok:1,fb_ok:"✅ ¡Correcto! Es el atajo rápido para regresar al inicio absoluto de la hoja de cálculo.",fb_err:"❌ Incorrecto. La combinación CTRL + INICIO te envía directamente a la celda A1."},
+      {q:"¿Cómo se llama la intersección geométrica de una fila y una columna en la cuadrícula?",
+       opts:["Celda","Función de texto","Borde de sombreado"],
+       ok:0,fb_ok:"✅ ¡Correcto! La celda es la unidad básica donde se ingresan los datos en Excel.",fb_err:"❌ Incorrecto. A la intersección entre una fila y una columna se le llama Celda."},
+      {q:"¿Por qué signo gráfico debe empezar SIEMPRE e indefectiblemente cualquier fórmula o función?",
+       opts:["El paréntesis (","El punto y coma ;","El signo igual ="],
+       ok:2,fb_ok:"✅ ¡Correcto! El signo = indica a Excel que la celda debe realizar un cálculo y no tratar el texto como simple escritura.",fb_err:"❌ Incorrecto. Toda fórmula o función en Excel debe comenzar obligatoriamente con el signo igual (=)."},
+      {q:"¿Qué función de texto coloca la primera letra de cada palabra en mayúscula (formato de nombre)?",
+       opts:["MAYUSC","NOMPROPIO","LARGO"],
+       ok:1,fb_ok:"✅ ¡Correcto! NOMPROPIO es ideal para normalizar nombres y apellidos (Ej. 'juan perez' a 'Juan Perez').",fb_err:"❌ Incorrecto. La función que aplica este formato es =NOMPROPIO()."},
+      {q:"¿Qué función se utiliza para contar el número exacto de caracteres de texto de una celda?",
+       opts:["LARGO","MAX","PROMEDIO"],
+       ok:0,fb_ok:"✅ ¡Correcto! La función =LARGO() devuelve la cantidad total de caracteres, incluyendo los espacios en blanco.",fb_err:"❌ Incorrecto. Para contar caracteres se utiliza la función =LARGO()."},
+      {q:"¿Qué función evalúa y devuelve el mayor número de una selección, incluyendo negativos y ceros?",
+       opts:["SUMA","MIN","MAX"],
+       ok:2,fb_ok:"✅ ¡Correcto! La función =MAX() busca el valor numérico más alto dentro del rango especificado.",fb_err:"❌ Incorrecto. La función para hallar el valor máximo es =MAX()."},
+      {q:"De acuerdo con las reglas de Excel indicadas, ¿con qué carácter se separan los argumentos de una función?",
+       opts:["Coma ,","Dos puntos :","Punto y coma ;"],
+       ok:2,fb_ok:"✅ ¡Correcto! Dependiendo de la configuración regional (generalmente en español), se utiliza el punto y coma.",fb_err:"❌ Incorrecto. Los argumentos individuales dentro de una función se separan por un punto y coma (;)."},
+      {q:"Para seleccionar una FILA completa en la hoja de cálculo, ¿dónde debe hacerse clic?",
+       opts:["En el identificativo izquierdo numérico de la fila","En el identificativo superior de la columna","En la barra superior de funciones"],
+       ok:0,fb_ok:"✅ ¡Correcto! Haciendo clic en el número de la fila ubicado a la izquierda, se selecciona toda la fila hasta el final.",fb_err:"❌ Incorrecto. Se debe hacer clic en el encabezado numérico izquierdo de la fila."}
+    ]
+  },
+  5:{name:"Unidad 5 · Internet",label:"NAVEGADORES Y REDES SOCIALES",emoji:"🌐",color:"#dc2626",
+    qs:[
+      {q:"¿Cómo define el módulo textualmente al Internet?",
+       opts:["Un programa privativo sin conexión remota","Una red de ordenadores conectados en toda la extensión del Globo Terráqueo","Un navegador de código abierto"],
+       ok:1,fb_ok:"✅ ¡Correcto! Internet es la red global masiva de computadoras interconectadas entre sí.",fb_err:"❌ Incorrecto. Se define como una red de ordenadores conectados a lo largo de todo el Globo Terráqueo."},
+      {q:"¿Qué programa informático se encarga de interpretar el lenguaje de las páginas web para visualizarlas?",
+       opts:["El gestor de correos","El navegador","El servidor de archivos"],
+       ok:1,fb_ok:"✅ ¡Correcto! El navegador (Browser) decodifica el HTML para que el usuario pueda interactuar visualmente con las páginas.",fb_err:"❌ Incorrecto. El software encargado de esta tarea se denomina Navegador Web."},
+      {q:"¿Qué navegador web histórico lanzado en 1995 fue sustituido formalmente por Microsoft Edge en 2015?",
+       opts:["Mozilla Firefox","Google Chrome","Internet Explorer"],
+       ok:2,fb_ok:"✅ ¡Correcto! Internet Explorer fue el navegador pionero de Microsoft hasta ser reemplazado por Edge.",fb_err:"❌ Incorrecto. El navegador sustituido por Microsoft Edge fue Internet Explorer."},
+      {q:"¿Qué motor de renderizado utiliza el navegador web libre y de código abierto Mozilla Firefox?",
+       opts:["Gecko","Framework Chrome","Explorer Engine"],
+       ok:0,fb_ok:"✅ ¡Correcto! Gecko es el motor de renderizado libre creado por la fundación Mozilla.",fb_err:"❌ Incorrecto. Firefox utiliza el motor de renderizado llamado Gecko."},
+      {q:"¿En qué región geográfica global se menciona que Google Chrome posee particular éxito y popularidad?",
+       opts:["América Latina","Europa Occidental","Asia Continental"],
+       ok:0,fb_ok:"✅ ¡Correcto! El módulo indica el uso y dominio destacado del navegador Chrome en América Latina.",fb_err:"❌ Incorrecto. El texto resalta su fuerte popularidad en América Latina."},
+      {q:"Según la descripción técnica histórica de Twitter dada en la guía, ¿en cuántos caracteres se limita la opinión?",
+       opts:["140 caracteres","280 caracteres","Sin límite alguno"],
+       ok:0,fb_ok:"✅ ¡Correcto! Históricamente, la guía refiere al límite de microblogging original de Twitter (140 caracteres).",fb_err:"❌ Incorrecto. Según la guía de estudio histórica, el límite original era de 140 caracteres."},
+      {q:"¿Qué aplicación móvil utiliza tu número telefónico para estructurar un chat versátil, simple y ordenado?",
+       opts:["Facebook","Instagram","Whatsapp"],
+       ok:2,fb_ok:"✅ ¡Correcto! WhatsApp revolucionó la mensajería enlazando directamente las cuentas a los números de teléfono celular.",fb_err:"❌ Incorrecto. Es Whatsapp la app que utiliza el número telefónico como identificador."},
+      {q:"¿A qué servicio de almacenamiento en internet desarrollado por Google se asocia directamente Chrome?",
+       opts:["Google Drive","Outlook Web","Mozilla Addons"],
+       ok:0,fb_ok:"✅ ¡Correcto! Google Drive es la nube oficial integrada con todo el ecosistema de Google y Chrome.",fb_err:"❌ Incorrecto. Chrome y el ecosistema de Google se asocian con el almacenamiento de Google Drive."}
+    ]
+  }
+};
+
+var cur=0,score=0,answered=false,activeQuiz=null;
+var letters=['A','B','C'];
+
+function loadQuiz(num){
+  activeQuiz=QUIZDATA[num];cur=0;score=0;answered=false;
+  document.getElementById('quizPlaceholder').style.display='none';
+  document.getElementById('quizZone').style.display='block';
+  document.getElementById('qscore').style.display='none';
+  document.getElementById('qopts').style.display='flex';
+  document.getElementById('questionBox').style.display='block';
+  document.getElementById('qfb').style.display='none';
+  document.getElementById('btnReset').style.display='inline-flex';
+  document.getElementById('btnNext').style.display='inline-flex';
+  document.getElementById('quizEmoji').textContent=activeQuiz.emoji;
+  document.getElementById('quizLabel').textContent=activeQuiz.label;
+  document.getElementById('quizName').textContent=activeQuiz.name;
+  document.getElementById('qprog').style.background=activeQuiz.color;
+  document.getElementById('btnNext').style.background=activeQuiz.color;
+  document.getElementById('quizZone').scrollIntoView({behavior:'smooth',block:'start'});
+  render();
+}
+
+function render(){
+  var d=activeQuiz.qs[cur];
+  document.getElementById('qtxt').textContent=d.q;
+  document.getElementById('qprog').style.width=((cur+1)/activeQuiz.qs.length*100)+'%';
+  document.getElementById('qlab').textContent=(cur+1)+'/'+activeQuiz.qs.length;
+  var html='';
+  for(var i=0;i<d.opts.length;i++){
+    html+='<div id="opt'+i+'" onclick="checkAns('+i+','+(i===d.ok?'true':'false')+')" style="padding:11px 14px;border-radius:10px;border:2px solid #e5e7eb;background:#fff;cursor:pointer;font-size:13px;font-weight:600;color:#111827;display:flex;align-items:center;gap:12px;">';
+    html+='<span style="width:26px;height:26px;border-radius:7px;background:#f3f4f6;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;">'+letters[i]+'</span>';
+    html+=d.opts[i]+'</div>';
+  }
+  document.getElementById('qopts').innerHTML=html;
+  document.getElementById('qfb').style.display='none';
+  answered=false;
+}
+
+function checkAns(i,correct){
+  if(answered)return;
+  answered=true;
+  var d=activeQuiz.qs[cur];
+  for(var j=0;j<d.opts.length;j++){var el=document.getElementById('opt'+j);if(el)el.style.pointerEvents='none';}
+  var chosen=document.getElementById('opt'+i);
+  var fb=document.getElementById('qfb');
+  if(correct){
+    score++;
+    chosen.style.borderColor='#16a34a';chosen.style.background='#dcfce7';chosen.style.color='#15803d';
+    var lk=chosen.querySelector('span');if(lk){lk.style.background='#16a34a';lk.style.color='#fff';}
+    fb.style.background='#dcfce7';fb.style.border='1px solid #86efac';fb.style.color='#15803d';fb.textContent=d.fb_ok;
+  }else{
+    chosen.style.borderColor='#dc2626';chosen.style.background='#fef2f2';chosen.style.color='#dc2626';
+    var lw=chosen.querySelector('span');if(lw){lw.style.background='#dc2626';lw.style.color='#fff';}
+    var co=document.getElementById('opt'+d.ok);
+    if(co){co.style.borderColor='#16a34a';co.style.background='#dcfce7';co.style.color='#15803d';var lk2=co.querySelector('span');if(lk2){lk2.style.background='#16a34a';lk2.style.color='#fff';}}
+    fb.style.background='#fef2f2';fb.style.border='1px solid #fca5a5';fb.style.color='#dc2626';fb.textContent=d.fb_err;
+  }
+  fb.style.display='block';
+}
+
+function nextQ(){cur++;if(cur>=activeQuiz.qs.length){showScore();}else{render();}}
+function showScore(){
+  document.getElementById('qopts').style.display='none';
+  document.getElementById('questionBox').style.display='none';
+  document.getElementById('qfb').style.display='none';
+  document.getElementById('btnReset').style.display='none';
+  document.getElementById('btnNext').style.display='none';
+  var pct=Math.round((score/activeQuiz.qs.length)*100);
+  document.getElementById('scoreEmoji').textContent=pct>=80?'🏆':pct>=60?'👍':'📖';
+  document.getElementById('scorenum').textContent=score+'/'+activeQuiz.qs.length;
+  document.getElementById('scorelbl').textContent=pct>=80?'¡Excelente!':pct>=60?'¡Buen intento!':'Sigue practicando';
+  document.getElementById('scoresub').textContent='Respondiste '+score+' de '+activeQuiz.qs.length+' correctamente ('+pct+'%).';
+  document.getElementById('qscore').style.display='block';
+}
+function resetQ(){render();}
+function resetAll(){cur=0;score=0;document.getElementById('qscore').style.display='none';document.getElementById('qopts').style.display='flex';document.getElementById('questionBox').style.display='block';document.getElementById('btnReset').style.display='inline-flex';document.getElementById('btnNext').style.display='inline-flex';render();}
+</script>
+
+</body>
+</html>
